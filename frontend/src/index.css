@@ -1,0 +1,44 @@
+:root {
+  --bg: #0b1120;
+  --card: #151e32;
+  --border: #26324a;
+  --text: #e5e9f2;
+  --muted: #8b97b1;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: radial-gradient(1200px 600px at 20% -10%, #1a2a52 0%, var(--bg) 60%);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+/* Annule les styles par défaut du template Vite (texte centré, bordures) */
+#root { width: 100%; max-width: none; margin: 0; padding: 0; border: none; text-align: left; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 48px 20px 64px; }
+
+.header h1 { font-size: 2rem; margin: 0 0 6px; letter-spacing: -0.02em; }
+.header p { margin: 0 0 32px; color: var(--muted); }
+
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.kpi, .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; }
+.kpi .label { color: var(--muted); font-size: 0.85rem; }
+.kpi .value { font-size: 1.8rem; font-weight: 700; margin: 6px 0 2px; }
+.kpi .detail { color: var(--muted); font-size: 0.8rem; }
+
+.card { margin-bottom: 24px; }
+.card h2 { font-size: 1.1rem; margin: 0 0 4px; }
+.card .sub { color: var(--muted); font-size: 0.85rem; margin: 0 0 16px; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.grid-2 .card { margin-bottom: 0; }
+@media (max-width: 850px) { .grid-2 { grid-template-columns: 1fr; } }
+
+.tooltip { background: #0b1120; border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; font-size: 0.85rem; }
+.tooltip strong { display: block; margin-bottom: 2px; }
+
+.footer { color: var(--muted); font-size: 0.8rem; text-align: center; margin-top: 32px; }

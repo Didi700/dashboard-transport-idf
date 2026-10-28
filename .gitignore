@@ -1,0 +1,15 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Données (trop lourdes, à télécharger séparément)
+data/*.csv
+data/*.db
+
+# Front
+frontend/node_modules/
+frontend/dist/
+
+# Mac
+.DS_Store
